@@ -55,6 +55,7 @@ CMD ["node", "server.js"]
 - `docker ps -a`: List all Docker containers, including those that are stopped.
 
 - `docker build -t <image_name>:<tag> .`: Build a Docker image from a Dockerfile in the current directory, tagging it with a specified name and tag.
+- `mvn spring-boot:build-image -Dspring-boot.build-image.imageName=<image_name>:<tag>`: Build a Docker image for a Spring Boot application using the Spring Boot Maven plugin, specifying the image name and tag.
 
 - `docker pull <image_name>:<tag>`: Pull a Docker image from a registry.
 
