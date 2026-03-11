@@ -1,0 +1,20 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+  - task: Maven@4
+    inputs:
+      mavenPomFile: 'spring/pom.xml'
+      goals: 'clean package'
+      publishJUnitResults: true
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: 'AzureServiceConnection'
+      appType: 'webAppLinux'
+      appName: 'spring-web-app-test'
+      package: 'spring/target/*.jar'
