@@ -16,7 +16,7 @@ Deployment steps using Docker:
 2. * **Build the Docker image**: Use the `docker build` command to create a Docker image from the Dockerfile. The Docker image is an executable application artifact that contains everything needed to run the application e.g. the code, runtime, libraries etc.
 3. **Run the Docker container**: Use the `docker run` command to start a container from the built image. The container will run the application as an instance of the image in an isolated environment, ensuring consistency across different systems.
 
-![alt text](assets/docker.png)
+![alt text](../assets/docker.png)
 
 ## Dockerfile
 A Dockerfile is a text file that contains instructions for building a Docker image. It specifies the base image, the application code, and any dependencies needed to run the application. Here is an example of a simple Dockerfile:
