@@ -39,9 +39,18 @@ Explainable AI is Google Cloud's set of tools and frameworks to help you underst
 ### ML Solutions
 - BigQuery ML: A tool for using SQL queries to create and execute ML models in BigQuery empowering non-technical users by reducing complexity.
 - Pretrained API: A set of pre-built machine learning models that can be easily integrated into applications for tasks like image recognition, natural language processing if limited training data is available.
-- AutoML: A no code solution which lets you build your own ML models on Vertex AI (Google Cloud's end to end AI & ML platform) through GUIs
-- Code your own models: Gives you flexibility and full control over the ML pipeline
+- AutoML (with Vertex AI): A no code solution which lets you build your own ML models on Vertex AI (Google Cloud's end to end AI & ML platform for custom model training) through GUIs
+- Code your own models (with Vertex AI): Gives you flexibility and full control over the ML pipeline
 - TensorFlow: An open-source machine learning framework that provides a comprehensive ecosystem for building and deploying ML models. Leverages TPI (Tensor Processing Units) which is Google's custom developed application specific integrated circuit (ASIC) used to accelerate machine learning workloads. TPUs act as domain specific hardware as opposed to general purpose hardware with CPUs and GPUs.
+
+#### When to Use Which ML Solution
+
+| If you need... | Best choice | Why |
+|---|---|---|
+| Fast simple predictions using SQL | BigQuery ML | Best for analysts and teams already comfortable with SQL. |
+| Ready-made AI for vision, language, or speech | Pretrained API | Quickest path to value with minimal training. |
+| Custom models without heavy coding | AutoML / VertexAI | Good for business teams who want a GUI-based solution. |
+| Maximum control, flexibility, and custom architecture | Custom models / TensorFlow | Best for advanced teams building unique or complex ML systems. |
 
 ### AI Solutions
 - Contact Center AI: models for speaking with customers and assisting human agents, increasing operational efficiency, and personalizing customer care to transform your contact center

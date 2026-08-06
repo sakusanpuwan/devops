@@ -38,7 +38,7 @@ Digital transformation helps organisations to:
   - Requires significant upfront investment, physical space, and ongoing maintenance
   - Difficult to scale quickly and may not be as flexible as cloud-based solutions
   
-- Private cloud - Org has virtualised servers in its own on prem data center or hosted by a private cloud prvider to create a private dedicated cloud environment for their exclusive use.
+- Private cloud / Single tenant - Org has virtualised servers in its own on prem data center or hosted by a private cloud prvider to create a private dedicated cloud environment for their exclusive use.
   - Accessed through the internet or a private network, but resources are not shared with other organisations
   - Similar ongoing maintenance and management requirements as on-premises solutions but more customizable and scalable than traditional on-premises infrastructure
   - Offers benefits of public cloud
@@ -48,7 +48,7 @@ Digital transformation helps organisations to:
     - Elasticity
   - Provides greater control and security compared to public cloud, as resources are not shared with other organisations
   - Best suited for orgs that have made significant infrastructure investments or if data must be kept on-premises
-- Public cloud
+- Public cloud / Multi tentant - A cloud computing model where resources are owned and operated by a third-party cloud service provider and shared among multiple organizations or tenants over the public internet.
   - On-demand computing services are managed by third-party cloud service providers
   - Offers scalability, flexibility, and cost-effectiveness
   - Requires minimal upfront investment and maintenance (only pay for what you use)
@@ -187,7 +187,9 @@ Abstraction is the process of hiding the underlying complexity of the implmentat
 
 **Shared Responsibility Model** - A framework that defines the division of responsibilities between the cloud service provider and the customer in terms of security, compliance, and management of cloud resources. The specific responsibilities may vary depending on the cloud service model (IaaS, PaaS, SaaS) and the specific services being used.
 
-![alt text](../../../assets/gcp-shared-responsibility-model.png)
+![alt text](../../assets/gcp-service-model.png)
+
+![alt text](../../assets/gcp-shared-responsibility-model.png)
 
 Cloud provider is responsible for securing the parts of the cloud that it directly controls, such as hardware, networks, and physical security.
 

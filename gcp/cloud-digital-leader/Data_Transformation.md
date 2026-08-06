@@ -13,8 +13,8 @@ Data can be stored and managed in different ways, such as:
 - **Databases**: Structured organised collection of data stored in relational databases (like MySQL, PostgreSQL) or NoSQL databases (like MongoDB, Cassandra). 
   - Relational Databases: These databases store data in tables with predefined relationships between them by joining tables. They use SQL (Structured Query Language) for querying and managing data. Examples include MySQL, PostgreSQL, and Microsoft SQL Server.
   - Non Relational Databases: These databases are flexible to handle unstructured or semi-structured data and do not require a fixed schema. They can be document-based, key-value, column-family, or graph databases. Examples include MongoDB (document-based), Redis (key-value), Cassandra (column-family), and Neo4j (graph).
-- **Data Lakes**: These are centralized repositories that allow you ingest, store, exmplore, process and analyse structured and unstructured data at any scale. Examples include Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
-- **Data Warehouses**: These are specialized databases designed for analytical processing and reporting from multiple sources. Examples include Amazon Redshift, Azure Synapse Analytics, and Google BigQuery.
+- **Data Lakes**: A vast storage repository that holds raw data in its original format, ready for any type of analysis. Examples include Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
+- **Data Warehouses**: Centralised system that consolidates data from multiple sources and is designed for fast querying, analytical processing and reporting. Examples include Amazon Redshift, Azure Synapse Analytics, and Google BigQuery.
 
 **First-party Data** is the proprietary customer datasets that a business collects from customer or audience transactions and interactions. These datasets might include information about digital interactions, like the length of time a user spends on a web page.
 
@@ -52,10 +52,9 @@ Means setting internal standards or data policies that apply to how data is gath
 ### Structured Data Storage
 Structured data consists of numbers and values that are organized in a predefined format in a relational database. It is typically stored in tables with rows and columns, making it easy to search and analyze using SQL (Structured Query Language). Examples of structured data include customer information, sales data, and inventory data.
 
-- Cloud SQL: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a relational database with minimal management overhead.
+- Cloud SQL: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a local relational database with minimal management overhead.
+  
 - Spanner: Globally distributed, horizontally unlimited scalable, strongly consistent relational database service. It is designed for mission-critical applications that require high availability (99.999%) and low latency at global scale. Spanner offers features like synchronous replication, automatic sharding, and support for SQL queries.
-
-Database Migration Service (DMS) is a fully managed service that can migrate your production database to Cloud SQL with minimal downtime. 
 
 - BigQuery: Serverless, highly scalable data warehouse service that enables fast SQL queries over large datasets. Provides storage and analytics. Encrypted at rest by default. Also has built in ML features for data analysis. It is ideal for analyzing large datasets and performing complex queries with high performance.
 
@@ -70,11 +69,14 @@ Online Transaction Processing (OLTP) used when fast data inserts and updates are
 
 Online Analytical Processing (OLAP) used when entire datasets need to be read. 
 
-If data is transactional and needs to be accesssed via SQL then Cloud SQL or Spanner. Cloud SQL for local to regional scalability and Spanner to scale a database globally. 
+### GCP Data Service Selection Guide
 
-If data transactional data needs to be accessed without SQL, Firestore might be best option. 
-
-If you have analytical workloads that require SQL commands BigQuery is best option. If you have analytical workloads that require non SQL commands, Bigtable is best option.
+| Requirement | Best GCP Service | Why it fits |
+|---|---|---|
+| Transactional data + SQL queries | Cloud SQL or Spanner | Cloud SQL is ideal for local to regional scale; Spanner is best for global scale and high availability. |
+| Transactional data + NoSQL access | Firestore | A flexible NoSQL database for real-time apps, syncing, and scalable document storage. |
+| Analytical workloads + SQL queries | BigQuery | A serverless data warehouse optimized for fast SQL analytics on large datasets. |
+| Analytical workloads + non-SQL access | Bigtable | A high-throughput NoSQL database designed for large-scale analytical and operational workloads. |
 
 ---
 Running modern apps on legacy, on-premises databases requires overcoming expensive, time-consuming challenges around latency, throughput, availability and scaling. 
@@ -83,6 +85,8 @@ With database modernisation, orgs can migrate data from trad databases to fully 
 - Lift and Shift: Rehost your database to the cloud with minimal changes. This is the quickest way to migrate, but may not take full advantage of cloud capabilities. Google Cloud's Database Migration Service (DMS) can help with this process.
 
 Datastream is the Google Cloud product which can be used to synchronize data across databases, storage systems, and applications
+
+Database Migration Service (DMS) is a fully managed service that can migrate your production database to Cloud SQL with minimal downtime. 
 
 ## Making Data Useful and Accessible
 ### Business Intelligence
@@ -95,4 +99,4 @@ Streaming analytics is the processing and analysing of data records continously 
 
 Google Cloud offers two main streaming analytics to ingest, process and analyse event streams in real time:
 - Pub/Sub: A message service which ingests hundred of millions of events per second from various device streams. Short for Publisher/Subscriber or publish messages to subscribers. 
-- Dataflow creates a pipeline to process both streaming data and batch data. This process is the extract, transform and load (ETL) process. It's open source and is built on Google's infrastructure. Allows for reliable auto scaling to meet data pipeline demands. It's serverless and fully managed meaning devs can build and run apps without having to provision or managed back-end infrastructure. 
+- Dataflow creates a pipeline to process both streaming data and batch data. This process is the extract, transform and load (ETL) process. It's open source and is built on Google's infrastructure (e.g. integrates with BigQuery). Allows for reliable auto scaling to meet data pipeline demands. It's serverless and fully managed meaning devs can build and run apps without having to provision or managed back-end infrastructure. 

@@ -17,6 +17,7 @@ Modular architecture:
 * Organization: Groups together projects that share a common purpose or business goalIt allows for better management and isolation of resources.
 * Project: Where teams do their day-to-day work. Projects contain the pipelines, users, and resources needed to build, deploy, test, and operate applications.Projects give teams a shared workspace while allowing them to operate independently.
   
+
 ![alt text](../assets/harness-platform.png)
 
 ## Harness Delegate
