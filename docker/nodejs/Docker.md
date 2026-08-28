@@ -1,6 +1,10 @@
 # Docker
 Docker is a virtualization platform that allows developers to easily create, deploy, and run applications in containers. Containers are lightweight, portable, and self-sufficient environments that can run applications consistently across different computing environments.
 
+![alt text](../../assets/docker-vm.png)
+
+**Containers** - consist of layers of linux base image, application image with configuration and dependencies, and a thin read-write layer on top.
+
 Traditional applications often require complex setups and dependencies, which can lead to issues when deploying across different environments.
 
 * Setup hardware
@@ -49,7 +53,7 @@ CMD ["node", "server.js"]
 
 **Port Mapping** - When running a Docker container, you can specify port mapping to allow communication between the container running in an isolated Docker network and the host machine. This is done using the `-p` flag in the `docker run` command, which maps a port on the host to a port in the container. For example, `docker run -p 8080:80 <image_name>:<tag>` would map port 8080 on the host to port 80 in the container, allowing you to access the application running in the container through the host's port 8080.
 
-## Docker Commands
+## Docker Basic Commands
 - `docker images`: List all Docker images available on the local machine.
 - `docker ps`: List all running Docker containers.
 - `docker ps -a`: List all Docker containers, including those that are stopped.
@@ -69,4 +73,44 @@ CMD ["node", "server.js"]
 - `docker rm <container_id>`: Remove a stopped Docker container.
 
 - `docker tag <image_name>:<tag> <new_image_name>:<new_tag>`: Tag an existing Docker image with a new name and tag, allowing you to manage different versions of your images.
-- `docker push <image_name>:<tag>`: Push a Docker image to a registry, making it available for others to pull and use.
+- `docker push <image_name>:<tag>`: Push a Docker image to a registry, making it available for others to pull and use. 
+- Image naming in registry `registry_domain/image_name:tag` 
+  - `docker push accountId.dkr.ecr.eu-north-1.amazonaws.com/ultron-app:latest` image name needs `accountId.dkr.ecr.eu-north-1.amazonaws.com` to act as the registry domain
+  - `docker push sakusanpuwan/ultron-app:2.0` image name needs `sakusanpuwan` to act as the namespace
+
+## Docker Compose
+Docker Compose is a tool for defining and running multi-container Docker applications. It allows you to define the Docker commands used in services, networks, and volumes needed for your application in a single `docker-compose.yml` file. With Docker Compose, you can easily start, stop, and manage all the containers in your application with a single command.
+
+- `docker-compose -f <docker-compose.yml> up`: Start all the services defined in the `docker-compose.yml` file, creating and starting the containers as needed including networks.
+- `docker-compose -f <docker-compose.yml> down`: Stop and remove all the containers, networks, and volumes defined in the `docker-compose.yml` file.
+
+## Docker Network
+When running multiple Docker containers, you can create an isolated Docker network to allow communication between the containers. This is done using the `docker network create` command, which creates a new network that containers can be connected to. Containers connected to the same network can communicate with each other using their container names as hostnames.
+
+- `docker network ls`: List all Docker networks available on the local machine.
+- `docker network create <network_name>`: Create a new Docker network with a specified name
+
+## Docker Container
+`docker exec -it <container_id> /bin/bash` / `docker exec -it <container_id> /bin/sh` : Execute a command inside a running Docker container, allowing you to interact with the container's filesystem and processes. The `-it` flag enables interactive mode and allocates a pseudo-TTY, while `/bin/bash` starts a Bash shell inside the container.
+
+## Private Docker Registry
+A private Docker registry is a self-hosted service that allows you to store and manage your own Docker images securely. It provides a way to share images within an organization or team without relying on public registries like Docker Hub. 
+
+AWS ECR (Elastic Container Registry) is a fully managed Docker container registry provided by Amazon Web Services. It allows you to store, manage, and deploy Docker container images securely and at scale. 
+
+1. Create a new repository in AWS ECR to store your Docker images. You can do this using the AWS Management Console or the AWS CLI. For example, using the AWS CLI:
+`aws ecr create-repository --repository-name ultron-app --region eu-north-1`
+2. Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
+`aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 625250728892.dkr.ecr.eu-north-1.amazonaws.com`
+Note: If you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
+3. Build your Docker image using the following command. 
+`docker build -t ultron-app .`
+4. After the build completes, tag your image so you can push the image to this repository:
+`docker tag ultron-app:latest 625250728892.dkr.ecr.eu-north-1.amazonaws.com/ultron-app:latest`
+5. Run the following command to push this image to your newly created AWS repository:
+`docker push 625250728892.dkr.ecr.eu-north-1.amazonaws.com/ultron-app:latest`
+
+---  
+## Ultron Example
+- `docker build -t ultron:1.0 .`: Build a Docker image for the Ultron application from the Dockerfile in the current directory, tagging it as `ultron:1.0`.
+- `docker run -d -p 8080:9000 ultron:1.0`: Run a Docker container for the Ultron application in detached mode, mapping port 8080 on the host to port 9000 in the container.
