@@ -88,3 +88,29 @@ They can used to create:
 - Create new partnerships - APIs can be used to create new partnerships by allowing other businesses to access and integrate with a company's systems and data.
 
 **Apigee** - Google Cloud's API management platform to operate API's with enhanced scale, security and automation. It provides feautres like authentication, authorisation and data encryption. It tracks and analyses API usage with real time analytics and monitoring. It also helps with developing and deploying APIs through the API editor and test sandbox. It offers API versioning, documentation and API request throttling to manage and control API traffic.
+
+
+--- 
+# GCP Compute Services
+
+| Service                            | What it is                                               | Best for                                                          | When to use                                                                                                 | Main limitation                                                      |
+| ---------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Cloud Run**                      | Fully managed serverless platform for running containers | APIs, websites, microservices, and background workers             | Use when you have a containerized application and want automatic scaling without managing servers           | Less control over the underlying infrastructure                      |
+| **Cloud Run functions**            | Event-driven serverless functions                        | Small, focused tasks triggered by events                          | Use for HTTP requests, Cloud Storage events, Pub/Sub messages, schedules, and database events               | Not ideal for large or complex applications                          |
+| **App Engine**                     | Platform as a Service for deploying applications         | Traditional web applications and APIs                             | Use when you want Google to manage the runtime, scaling, patching, and infrastructure                       | More opinionated and less flexible than Cloud Run                    |
+| **Compute Engine**                 | Infrastructure as a Service providing virtual machines   | Legacy applications, custom software, and specialized workloads   | Use when you need operating-system, networking, disk, GPU, or hardware control                              | You manage the VM, operating system, patching, scaling, and security |
+| **Google Kubernetes Engine (GKE)** | Managed Kubernetes service for running containers        | Complex microservices and container orchestration                 | Use when you need Kubernetes features, custom networking, service meshes, or advanced deployment strategies | More complex and requires Kubernetes knowledge                       |
+| **Batch**                          | Managed service for running batch jobs                   | Data processing, simulations, rendering, and scientific workloads | Use when work can run as scheduled or one-time jobs instead of a continuously available service             | Not designed for interactive applications                            |
+| **Bare Metal Solution**            | Dedicated physical servers connected to Google Cloud     | Specialized databases and workloads requiring physical servers    | Use when an application cannot run on virtual machines or requires dedicated hardware                       | Expensive and suitable only for specific workloads                   |
+
+## Quick Decision Guide
+
+| Requirement                                                 | Recommended service     |
+| ----------------------------------------------------------- | ----------------------- |
+| Run a small function after an event                         | **Cloud Run functions** |
+| Deploy a containerized API or website easily                | **Cloud Run**           |
+| Deploy a traditional web application with a managed runtime | **App Engine**          |
+| Get full control over a virtual machine                     | **Compute Engine**      |
+| Run complex containerized applications with Kubernetes      | **GKE**                 |
+| Run large, scheduled, or one-time jobs                      | **Batch**               |
+| Use dedicated physical servers                              | **Bare Metal Solution** |

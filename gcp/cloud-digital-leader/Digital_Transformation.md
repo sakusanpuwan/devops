@@ -145,7 +145,7 @@ A zone is an area where Google Cloud resources are deployed.
 
 Each zone is isolated from other zones in the same region to provide high availability and fault tolerance.
 
-Multi-region locations are are 2 geographic areas separated by at least 160km that contain multiple regions, providing even greater redundancy and availability. E.g. europe is a multi-region location that includes multiple regions such as europe-west1, europe-west2, and europe-west3.
+Multi-region locations are 2 geographic areas separated by at least 160km that contain multiple regions, providing even greater redundancy and availability. E.g. europe is a multi-region location that includes multiple regions such as europe-west1, europe-west2, and europe-west3.
 
 **Edge Network** - a place where a device or an organisation's network connects to the Internet. It's called "edge" because it's the entry point to the network. When a user open a Google app, Google responds to that request from an edge network location that will provide the lowest latency. 
 

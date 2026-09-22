@@ -11,12 +11,12 @@ Data can be categorized into different types, such as:
 
 Data can be stored and managed in different ways, such as:
 - **Databases**: Structured organised collection of data stored in relational databases (like MySQL, PostgreSQL) or NoSQL databases (like MongoDB, Cassandra). 
-  - Relational Databases: These databases store data in tables with predefined relationships between them by joining tables. They use SQL (Structured Query Language) for querying and managing data. Examples include MySQL, PostgreSQL, and Microsoft SQL Server.
-  - Non Relational Databases: These databases are flexible to handle unstructured or semi-structured data and do not require a fixed schema. They can be document-based, key-value, column-family, or graph databases. Examples include MongoDB (document-based), Redis (key-value), Cassandra (column-family), and Neo4j (graph).
+  - **Relational Databases**: These databases store data in tables with predefined relationships between them by joining tables. They use SQL (Structured Query Language) for querying and managing data. Examples include MySQL, PostgreSQL, and Microsoft SQL Server.
+  - **Non Relational Databases**: These databases are flexible to handle unstructured or semi-structured data and do not require a fixed schema. They can be document-based, key-value, column-family, or graph databases. Examples include MongoDB (document-based), Redis (key-value), Cassandra (column-family), and Neo4j (graph).
 - **Data Lakes**: A vast storage repository that holds raw data in its original format, ready for any type of analysis. Examples include Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
 - **Data Warehouses**: Centralised system that consolidates data from multiple sources and is designed for fast querying, analytical processing and reporting. Examples include Amazon Redshift, Azure Synapse Analytics, and Google BigQuery.
 
-**First-party Data** is the proprietary customer datasets that a business collects from customer or audience transactions and interactions. These datasets might include information about digital interactions, like the length of time a user spends on a web page.
+**First-party data** is the proprietary customer datasets that a business collects from customer or audience transactions and interactions. These datasets might include information about digital interactions, like the length of time a user spends on a web page.
 
 **Second-party data** often describes first-party data from another organization, such as a partner or other business in their supply chain, that can be easily deployed to augment a company's internal datasets.
 
@@ -42,27 +42,27 @@ Means setting internal standards or data policies that apply to how data is gath
 
 ## Data Management Solutions
 ### Unstructured Data Storage
-- Cloud Storage: Offers object storage (computer data storage architecture that manages data as objects instead of files with folder hierarchy). Objects are stored in packaged format that contain the binary form of the actual data, metadata(date, author, type) and a global unique identifier (URL). Object storage is ideal for web tech as it can store videos, pictures and audio. Unstrucutured as it doesn't have a predefined data model like database format. 
-  - Standard Storage: Frequently accessed or hot data / data that's stored for only brief periods of time.
-  - Nearline Storage: Infrequently accessed data like reading or modifying data once a month or less. E.g. data backup, archiving
-  - Coldline Storage: Low cost storage for infrequently accessed data. Meant for reading or modifying data at most once every 90 days
-  - Archive Storage: Lowest cost option, used for data archiving, online backup and disaster recovery. Meant for data that is accessed less than once a year
+- **Cloud Storage**: Offers object storage (computer data storage architecture that manages data as objects instead of files with folder hierarchy). Objects are stored in packaged format that contain the binary form of the actual data, metadata(date, author, type) and a global unique identifier (URL). Object storage is ideal for web tech as it can store videos, pictures and audio. Unstrucutured as it doesn't have a predefined data model like database format. 
+  - **Standard Storage**: Frequently accessed or hot data / data that's stored for only brief periods of time.
+  - **Nearline Storage**: Infrequently accessed data like reading or modifying data once a month or less. E.g. data backup, archiving
+  - **Coldline Storage**: Low cost storage for infrequently accessed data. Meant for reading or modifying data at most once every 90 days
+  - **Archive Storage**: Lowest cost option, used for data archiving, online backup and disaster recovery. Meant for data that is accessed less than once a year
   - All options offer unlimited storage with no minmum object size requirements, worldwide access and locations, low latency and high durability. Autoclass which automatically transitions objects to appropriate storage class based on access patterns.
 
 ### Structured Data Storage
 Structured data consists of numbers and values that are organized in a predefined format in a relational database. It is typically stored in tables with rows and columns, making it easy to search and analyze using SQL (Structured Query Language). Examples of structured data include customer information, sales data, and inventory data.
 
-- Cloud SQL: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a local relational database with minimal management overhead.
+- **Cloud SQL**: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a local relational database with minimal management overhead.
   
-- Spanner: Globally distributed, horizontally unlimited scalable, strongly consistent relational database service. It is designed for mission-critical applications that require high availability (99.999%) and low latency at global scale. Spanner offers features like synchronous replication, automatic sharding, and support for SQL queries.
+- **Spanner**: Globally distributed, horizontally unlimited scalable, strongly consistent relational database service. It is designed for mission-critical applications that require high availability (99.999%) and low latency at global scale. Spanner offers features like synchronous replication, automatic sharding, and support for SQL queries.
 
-- BigQuery: Serverless, highly scalable data warehouse service that enables fast SQL queries over large datasets. Provides storage and analytics. Encrypted at rest by default. Also has built in ML features for data analysis. It is ideal for analyzing large datasets and performing complex queries with high performance.
+- **BigQuery**: Serverless, highly scalable data warehouse service that enables fast SQL queries over large datasets. Provides storage and analytics. Encrypted at rest by default. Also has built in ML features for data analysis. It is ideal for analyzing large datasets and performing complex queries with high performance.
 
 ### Semi-structured Data Storage
 Semi-structured data contains elements of both structured and unstructured data. It does have some defining and consistency but doesn't follow a rigid structure like a relation database. Easy to organise as it usually contains some organisational properties such as tags or metadata. E.g email message. Actual content of email is unstructured but it has metadata such as sender, recipient, subject and timestamp which is structured.
 
-- Firestore: a flexible, horizontally auto scalable, NoSQL cloud database for storing and syncing data in real-time. Firestore performs data storage in the form of documents, with the documents being stored in collections. Also provides offline usage through a comprehensive database on users’ devices.
-- Bigtable: Fully managed NoSQL database service for large analytical and operational workloads. It's the same database that powers many core Google services, including Search, Analytics, Maps, and Gmail. Bigtable is designed to handle large workloads at consistent low latency, which means Bigtable responds to requests quickly, and high throughput, which means it can send and receive large amounts of data. A good choice for both operational and analytical applications, including Internet of Things, user analytics, and financial data analysis. A good option if you're working with more than 1 terabyte of data with high throughput. 
+- **Firestore**: a flexible, horizontally auto scalable, NoSQL cloud database for storing and syncing data in real-time. Firestore performs data storage in the form of documents, with the documents being stored in collections. Also provides offline usage through a comprehensive database on users’ devices.
+- **Bigtable**: Fully managed NoSQL database service for large analytical and operational workloads. It's the same database that powers many core Google services, including Search, Analytics, Maps, and Gmail. Bigtable is designed to handle large workloads at consistent low latency, which means Bigtable responds to requests quickly, and high throughput, which means it can send and receive large amounts of data. A good choice for both operational and analytical applications, including Internet of Things, user analytics, and financial data analysis. A good option if you're working with more than 1 terabyte of data with high throughput. 
 
 ---
 Online Transaction Processing (OLTP) used when fast data inserts and updates are required to build row based records. 
@@ -98,5 +98,6 @@ Batch processing often processes large volumes of data with long periods of late
 Streaming analytics is the processing and analysing of data records continously instead of in batches. This is useful for types of data sources that send data in small sizes in a continous flow as the data is generated. E.g. equipment sensors, clickstreams, social media feeds, stock market data. They can analyse data in real time and provide insights such as metering, server activity, geolocation, website clicks.
 
 Google Cloud offers two main streaming analytics to ingest, process and analyse event streams in real time:
-- Pub/Sub: A message service which ingests hundred of millions of events per second from various device streams. Short for Publisher/Subscriber or publish messages to subscribers. 
-- Dataflow creates a pipeline to process both streaming data and batch data. This process is the extract, transform and load (ETL) process. It's open source and is built on Google's infrastructure (e.g. integrates with BigQuery). Allows for reliable auto scaling to meet data pipeline demands. It's serverless and fully managed meaning devs can build and run apps without having to provision or managed back-end infrastructure. 
+- **Pub/Sub**: A message service which ingests hundred of millions of events per second from various device streams. Short for Publisher/Subscriber or publish messages to subscribers. 
+- **Dataflow** creates a pipeline to process both streaming data and batch data. This process is the extract, transform and load (ETL) process. It's open source and is built on Google's infrastructure (e.g. integrates with BigQuery). Allows for reliable auto scaling to meet data pipeline demands. It's serverless and fully managed meaning devs can build and run apps without having to provision or managed back-end infrastructure. 
+- **Cloud Data Fusion** - a fully managed, cloud-native data integration service that allows users to build and manage ETL/ELT data pipelines. It provides a visual interface for designing data workflows, making it easier to ingest, transform, and move data between various sources and destinations. Cloud Data Fusion supports both batch and streaming data processing, enabling organizations to handle diverse data integration needs efficiently.

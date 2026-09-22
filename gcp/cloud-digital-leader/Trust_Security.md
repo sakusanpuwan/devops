@@ -4,12 +4,15 @@
 
 **Privileged Access Security Model** grants specific users access to a broader set of resources than ordinary users. E.g. a system administrator may have privileged acces to perform tasks such as troubleshooting and data restoration. It's essential to frequently manage and monitor access levels.
 
-**Least Privilege Security Model** advocates granting users only access they need to perform their job functions and no more. This reduces the risk of unauthorised access to sensitive data. E.g. a sales rep only needs access to CRM system not systems like payroll. 
+**Least Privilege Security Model** advocates granting users only minimum access they need to perform their job functions and no more. This reduces the risk of unauthorised access to sensitive data. E.g. a sales rep only needs access to CRM system not systems like payroll. 
 
 **Zero Trust Architecture** implements strict access controls and continously verifies user identity and device health before granting access to resources. It assumes that threats can exist both inside and outside the network, so it requires continuous authentication and authorization for all users and devices.
 
+**Defense in Depth** is a security approach that involves implementing multiple layers of security controls (physcial, technical, procedural) throughout an organization's IT infrastructure. This strategy ensures that if one layer is compromised, other layers can still provide protection.
+
 **Security by Default** emphasises integrating security measures into systems and apps from the initial stages of development. By prioritising security from the outset, organisations can reduce vulnerabilities and establish a strong security foundation in their cloud environments.
 
+---
 **Security Posture** refers to the overall security status of a cloud environment. It indicates how well and organisation is prepared to defend against cyber attacks by evaluating their security controls, policies and practices. 
 
 **Cyber Resilience** refers to an organization's ability to withstand and recover quickly from cyber attacks. It involves identifying, assessing, and mitigating risks, responding to incidents effectively, and recovering from disruptions quickly.
@@ -18,7 +21,7 @@
 
 **Encryption** is the process of converting data into unreadable format by using an encryption algorithm. **Decryption** is the process of using an encryption key to convert encrypted data back into its original, readable format.
 
-3 essential aspects of security(CIA Triad):
+3 essential aspects of security (CIA Triad):
 - Confidentiality: Keeping information safe and secret and is protected from unauthorized access and disclosure. Encryption is a crucial method in ensuring confidentiality.
 - Integrity: Ensuring that data is accurate, trustworthy, complete, and unaltered during storage and transmission. Controls such as checksums, digital signatures, and access controls are used to maintain data integrity.
 - Availability: Ensuring that data and services are accessible to authorized users when needed. Cloud environments must be designed with redundancy, failover mechanisms, and disaster recovery plans to maintain high availability.
@@ -83,6 +86,10 @@ Advanced Encryption Standard (AES) is a widely used encryption algorithm that pr
 
 **Automate infrastructure** - by adopting tools like Terraform, Jenkins and Cloud Build, you create an immutable infrastructure ensuring a secure and reliable cloud environment. This approach allows you to define and manage your infrastructure as code, making it easier to maintain consistency, track changes, and quickly recover from any issues that may arise. By automating the provisioning and configuration of your infrastructure, you can reduce the risk of human error and ensure that your cloud environment remains secure and compliant with industry standards.
 
+### Cloud Armour
+Google Cloud Armour is a security service that protects applications and services from various types of cyber threats, including Distributed Denial of Service (DDoS) attacks, web application attacks, and other malicious traffic. It provides a set of security features and capabilities to help organizations safeguard their applications and maintain availability for legitimate users.
+
+
 ### Security Operations
 SecOps protects your organisation's data and systems in the cloud by reducing the risk of data breaches, system outages and other security incidents. 
 - Vulnerability management: Regularly scanning for vulnerabilities in your cloud environment and applying patches and updates to address them. This helps to prevent attackers from exploiting known weaknesses in your systems. Google Cloud's Security Command Center (SCC) provides an overview of your security posture. 
@@ -118,3 +125,4 @@ Google Cloud allows you to:
 
 **Compliance Reports Manager** is a powerful tool which offers easy, on-demand access to critical compliance resources at no extra cost. Within the Compliance Reports Manager, you'll discover our latest ISO/IEC certificates, SOC reports and self-assessments. These resources provide evidence of our adherence to rigorous compliance standards and help streamline your own reporting and compliance efforts.
 
+**Confidential Computing** allows you to protect data while it being processed. Ensures data soverignty because data is encrypted and Google cannot access it. 
