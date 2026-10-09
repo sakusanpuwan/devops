@@ -9,10 +9,10 @@
 Most data analysis and business intelligence is based on historic data used to calculate metrics or identify trends but to create value in your business you need to leverage that data to make decisions for future business. With access to the right data, AI and ML can be used to uncover predictive insights to benefit companies and their customers.
 
 ML is suited to solve common business problems:
-- Replacing or simplifying rule based systems: If all the data that's available shows which search results users clicked on per query, a machine learning model can be trained to predict the rank for search results, instead of hard coding rule based systems.
-- Automating processes: Replace manual, time-consuming processes prone to human error with predictable, repeatable, efficient and accurate decisions at scale
-- Understanding unstructured data: Use machine learning to analyze and derive insights from unstructured data sources, such as text, images, and videos, enabling better decision-making.
-- Personalisation: Leverage machine learning to deliver personalized experiences and recommendations to users based on their behavior, preferences, and interactions.
+- **Replacing or simplifying rule based systems**: If all the data that's available shows which search results users clicked on per query, a machine learning model can be trained to predict the rank for search results, instead of hard coding rule based systems.
+- **Automating processes**: Replace manual, time-consuming processes prone to human error with predictable, repeatable, efficient and accurate decisions at scale
+- **Understanding unstructured data**: Use machine learning to analyze and derive insights from unstructured data sources, such as text, images, and videos, enabling better decision-making.
+- **Personalisation**: Leverage machine learning to deliver personalized experiences and recommendations to users based on their behavior, preferences, and interactions.
 
 ### Data Quality
 ML models require high-quality, diverse, and representative training data to perform well and avoid biases. It's essential to continuously monitor and update these models to ensure they remain effective and relevant over time.
@@ -59,9 +59,9 @@ Explainable AI is Google Cloud's set of tools and frameworks to help you underst
 - **Cloud Talent Solution**:  uses AI with job search and talent acquisition capabilities, matches candidates to ideal jobs faster, and allows employers to attract and convert higher quality candidates.
 
 ### Considerations 
-- Speed: How quickly model to prod? Pre-trained APIs require no model training but custom build ML model from scratch unlike AutoML and BigQuery ML.
-- Differentiation: How unique is your model, or how unique does it need to be? Vertex AI provides tools for custom model training and fine-tuning, allowing for greater differentiation in model performance.
-- Expertise: What level of expertise is required to develop and maintain the model? Pre-trained APIs and AutoML require less expertise compared to custom model development.
-- Effort: How complex? How much data? Experience of team?
+- **Speed**: How quickly model to prod? Pre-trained APIs require no model training but custom build ML model from scratch unlike AutoML and BigQuery ML.
+- **Differentiation**: How unique is your model, or how unique does it need to be? Vertex AI provides tools for custom model training and fine-tuning, allowing for greater differentiation in model performance.
+- **Expertise**: What level of expertise is required to develop and maintain the model? Pre-trained APIs and AutoML require less expertise compared to custom model development.
+- **Effort**: How complex? How much data? Experience of team?
 
 

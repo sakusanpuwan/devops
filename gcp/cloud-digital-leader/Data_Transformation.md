@@ -33,12 +33,12 @@ Data can be stored and managed in different ways, such as:
 ### Data Governance 
 Means setting internal standards or data policies that apply to how data is gathered, stored, processed, and disposed of. It also governs who can access certain data and what data is under governance. 
 
-- Valuable:  implements processes to ensure high quality data, and provides a platform that makes it easier to share data securely with stakeholders across the organization.
-- Decision-Making:  provides a framework for making informed decisions about data management and usage, ensuring that data is used effectively to drive business outcomes.
-- Improves cost control -  helps organizations manage resources and operate more effectively by eliminating data duplication caused by information silos
-- Enhances regulatory compliance -  helps organizations comply with data protection regulations by implementing policies and procedures for data handling and security.
-- Increases trust and transparency -  promotes trust and transparency by ensuring that data is accurate
-- Reduces risk -  helps organizations identify and mitigate risks associated with data management, such as data breaches or loss of data integrity.
+- **Valuable**:  implements processes to ensure high quality data, and provides a platform that makes it easier to share data securely with stakeholders across the organization.
+- **Decision-Making**:  provides a framework for making informed decisions about data management and usage, ensuring that data is used effectively to drive business outcomes.
+- **Improves cost control** -  helps organizations manage resources and operate more effectively by eliminating data duplication caused by information silos
+- **Enhances regulatory compliance** -  helps organizations comply with data protection regulations by implementing policies and procedures for data handling and security.
+- **Increases trust and transparency** -  promotes trust and transparency by ensuring that data is accurate
+- **Reduces risk** -  helps organizations identify and mitigate risks associated with data management, such as data breaches or loss of data integrity.
 
 ## Data Management Solutions
 ### Unstructured Data Storage
@@ -48,21 +48,19 @@ Means setting internal standards or data policies that apply to how data is gath
   - **Coldline Storage**: Low cost storage for infrequently accessed data. Meant for reading or modifying data at most once every 90 days
   - **Archive Storage**: Lowest cost option, used for data archiving, online backup and disaster recovery. Meant for data that is accessed less than once a year
   - All options offer unlimited storage with no minmum object size requirements, worldwide access and locations, low latency and high durability. Autoclass which automatically transitions objects to appropriate storage class based on access patterns.
+- **Cloud Filestore**: Fully managed file storage service for applications that require a file system interface and a shared file system for data. It is ideal for applications that require high performance and low latency, such as content management systems, media processing, and data analytics. It supports NFS (Network File System) protocol and can be mounted on Compute Engine instances or Kubernetes Engine pods.
+
+### Semistructured Data Storage
+- **Cloud Firestore**: A flexible, scalable NoSQL document database for mobile, web, and server development. It is designed to store and sync data in real time across multiple clients and devices. Firestore supports offline data access, real-time updates, and automatic scaling. It is ideal for applications that require real-time data synchronization, such as chat applications, collaborative tools, and gaming platforms.
+- **Cloud Bigtable**: A fully managed, scalable NoSQL database service for large analytical and operational workloads. It is designed to handle massive amounts of data with low latency and high throughput. Bigtable is ideal for applications that require real-time analytics, time-series data, and IoT (Internet of Things) data processing. It supports the HBase API and integrates with other GCP services like Dataflow and BigQuery.
 
 ### Structured Data Storage
 Structured data consists of numbers and values that are organized in a predefined format in a relational database. It is typically stored in tables with rows and columns, making it easy to search and analyze using SQL (Structured Query Language). Examples of structured data include customer information, sales data, and inventory data.
 
-- **Cloud SQL**: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a local relational database with minimal management overhead.
-  
-- **Spanner**: Globally distributed, horizontally unlimited scalable, strongly consistent relational database service. It is designed for mission-critical applications that require high availability (99.999%) and low latency at global scale. Spanner offers features like synchronous replication, automatic sharding, and support for SQL queries.
+- **Cloud SQL**: Fully managed relational database service that supports MySQL, PostgreSQL and SQL Server. It offers high availability (99.95%), automatic backups, and seamless integration with other GCP services. It is ideal for applications that require a local relational database with minimal management overhead. 
+- **Cloud Spanner**: Globally distributed, horizontally unlimited scalable, strongly consistent relational database service. It is designed for mission-critical applications that require high availability (99.999%) and low latency at global scale. Spanner offers features like synchronous replication, automatic sharding, and support for SQL queries.
 
 - **BigQuery**: Serverless, highly scalable data warehouse service that enables fast SQL queries over large datasets. Provides storage and analytics. Encrypted at rest by default. Also has built in ML features for data analysis. It is ideal for analyzing large datasets and performing complex queries with high performance.
-
-### Semi-structured Data Storage
-Semi-structured data contains elements of both structured and unstructured data. It does have some defining and consistency but doesn't follow a rigid structure like a relation database. Easy to organise as it usually contains some organisational properties such as tags or metadata. E.g email message. Actual content of email is unstructured but it has metadata such as sender, recipient, subject and timestamp which is structured.
-
-- **Firestore**: a flexible, horizontally auto scalable, NoSQL cloud database for storing and syncing data in real-time. Firestore performs data storage in the form of documents, with the documents being stored in collections. Also provides offline usage through a comprehensive database on users’ devices.
-- **Bigtable**: Fully managed NoSQL database service for large analytical and operational workloads. It's the same database that powers many core Google services, including Search, Analytics, Maps, and Gmail. Bigtable is designed to handle large workloads at consistent low latency, which means Bigtable responds to requests quickly, and high throughput, which means it can send and receive large amounts of data. A good choice for both operational and analytical applications, including Internet of Things, user analytics, and financial data analysis. A good option if you're working with more than 1 terabyte of data with high throughput. 
 
 ---
 Online Transaction Processing (OLTP) used when fast data inserts and updates are required to build row based records. 

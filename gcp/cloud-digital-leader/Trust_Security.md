@@ -21,10 +21,10 @@
 
 **Encryption** is the process of converting data into unreadable format by using an encryption algorithm. **Decryption** is the process of using an encryption key to convert encrypted data back into its original, readable format.
 
-3 essential aspects of security (CIA Triad):
-- Confidentiality: Keeping information safe and secret and is protected from unauthorized access and disclosure. Encryption is a crucial method in ensuring confidentiality.
-- Integrity: Ensuring that data is accurate, trustworthy, complete, and unaltered during storage and transmission. Controls such as checksums, digital signatures, and access controls are used to maintain data integrity.
-- Availability: Ensuring that data and services are accessible to authorized users when needed. Cloud environments must be designed with redundancy, failover mechanisms, and disaster recovery plans to maintain high availability.
+3 essential aspects of security (**CIA Triad**):
+- **Confidentiality**: Keeping information safe and secret and is protected from unauthorized access and disclosure. Encryption is a crucial method in ensuring confidentiality.
+- **Integrity**: Ensuring that data is accurate, trustworthy, complete, and unaltered during storage and transmission. Controls such as checksums, digital signatures, and access controls are used to maintain data integrity.
+- **Availability**: Ensuring that data and services are accessible to authorized users when needed. Cloud environments must be designed with redundancy, failover mechanisms, and disaster recovery plans to maintain high availability.
 
 Control refers to the measures and processes implemented to manage and mitigate security risks. These measures help organizations manage and mitigate security risks associated with cloud-based systems.
 
@@ -69,9 +69,9 @@ Data is encrypted and authenticated at multiple network layers. Data in use refe
 Advanced Encryption Standard (AES) is a widely used encryption algorithm that provides strong security for data. Google Cloud uses AES-256, which is a variant of AES that uses a 256-bit key length, providing a high level of security for data encryption
 
 ### Identity
-- Authentication: Serves as the gatekeeper by verifying the identify of users or systems that seek access. Google Cloud supports various authentication methods, including passwords, physical tokens, biometric data and multi-factor (two-step) authentication (MFA). This ensures that only authorized users can access resources and data.
-- Authorisation: Is the access control mechanism but granting different levels of permissions to individuals or groups based on their roles, reponsibilities and organisation hierarchy.
-- Auditing: By collecting and analysing logs of user activity, system events helps organisation detect anomalies, security breaches and policy violations.
+- **Authentication**: Serves as the gatekeeper by verifying the identify of users or systems that seek access. Google Cloud supports various authentication methods, including passwords, physical tokens, biometric data and multi-factor (two-step) authentication (MFA). This ensures that only authorized users can access resources and data.
+- **Authorisation**: Is the access control mechanism but granting different levels of permissions to individuals or groups based on their roles, reponsibilities and organisation hierarchy.
+- **Auditing**: By collecting and analysing logs of user activity, system events helps organisation detect anomalies, security breaches and policy violations.
 
 **Identity Access Management (IAM)** - With IAM, you can create and manage user accounts, assign roles to users, grant and revoke permissions. 
 
@@ -114,14 +114,15 @@ Benfits:
 - Google privacy policies are audited against international standards: Transparency Reports and Independent Audits Transparency provide valuable insights and accountability regarding the privacy, security and access to info. Google participates in EU Cloud Code of Conduct to further demonstrate accountability, compliance support and robust data protection practices.
 
 **Data sovereignty** - refers to the legal concept that data is subject to laws and regulations of the country it resides. General Data Protection Regulation (GDPR) in the European UNion requires companies to comply with data protection laws when processing or storing personal data of EU citizens.
+
 **Data residency** - refers to the physical location where data is stored and processed. It is important for compliance and legal reasons, as different jurisdictions may have varying data protection laws and regulations.
 
 Google Cloud allows you to:
 - Choose the physical location of data through regions: Ensuring data is only stored within the selected region as in Service Specific Terms. Google cloud provides Organisation Policy constraints coupled with IAM configuration to prevent accidental data storage in wrong region.
 - Virtual Private Cloud (VPC) Service Controls: Lets you restrict network access to data. Limits user access through IP address filtering. 
-- Google CLoud Armor lets you restrict traffic locations for your external load balancer by adding an extra layer of protection. 
+- Google Cloud Armor lets you restrict traffic locations for your external load balancer by adding an extra layer of protection. 
 
-**Google Cloud compliance resource center** is a hub for info on certifications and compliance standards. You can find mappings of Google CLoud's security, privacy and compliance controls to global standards. Also offers documentation on regional and sector specific regulations. 
+**Google Cloud compliance resource center** is a hub for info on certifications and compliance standards. You can find mappings of Google Cloud's security, privacy and compliance controls to global standards. Also offers documentation on regional and sector specific regulations. 
 
 **Compliance Reports Manager** is a powerful tool which offers easy, on-demand access to critical compliance resources at no extra cost. Within the Compliance Reports Manager, you'll discover our latest ISO/IEC certificates, SOC reports and self-assessments. These resources provide evidence of our adherence to rigorous compliance standards and help streamline your own reporting and compliance efforts.
 

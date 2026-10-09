@@ -21,7 +21,7 @@ Digital transformation helps organisations to:
 - Create services - Develop new digital products and services
 - Deliver value - Accelerate time to market and improve operational efficiency
 
-**Cloud** - a metaphor for the network of data centers which store and compute information that's avaiable through the internet. A model for enabling universal, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+**Cloud** - a metaphor for the network of data centers which store and compute information that's available through the internet. A model for enabling universal, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
 
 **Cloud Technology** - The use of cloud computing services to deliver various applications and services over the internet, allowing organisations to scale their operations and reduce costs.
 
@@ -29,7 +29,7 @@ Digital transformation helps organisations to:
 
 ### Cloud Deployment Models
 
-- On premise
+- **On premise**
   - Hosted onsite in an organisation's own data center
   - Runs in a local environment and is managed by the organisation's IT team
   - Traditional model for IT infrastructure  
@@ -38,7 +38,7 @@ Digital transformation helps organisations to:
   - Requires significant upfront investment, physical space, and ongoing maintenance
   - Difficult to scale quickly and may not be as flexible as cloud-based solutions
   
-- Private cloud / Single tenant - Org has virtualised servers in its own on prem data center or hosted by a private cloud prvider to create a private dedicated cloud environment for their exclusive use.
+- **Private cloud / Single tenant** - Org has virtualised servers in its own on prem data center or hosted by a private cloud prvider to create a private dedicated cloud environment for their exclusive use.
   - Accessed through the internet or a private network, but resources are not shared with other organisations
   - Similar ongoing maintenance and management requirements as on-premises solutions but more customizable and scalable than traditional on-premises infrastructure
   - Offers benefits of public cloud
@@ -48,44 +48,44 @@ Digital transformation helps organisations to:
     - Elasticity
   - Provides greater control and security compared to public cloud, as resources are not shared with other organisations
   - Best suited for orgs that have made significant infrastructure investments or if data must be kept on-premises
-- Public cloud / Multi tentant - A cloud computing model where resources are owned and operated by a third-party cloud service provider and shared among multiple organizations or tenants over the public internet.
+- **Public cloud / Multi tenant** - A cloud computing model where resources are owned and operated by a third-party cloud service provider and shared among multiple organizations or tenants over the public internet.
   - On-demand computing services are managed by third-party cloud service providers
   - Offers scalability, flexibility, and cost-effectiveness
   - Requires minimal upfront investment and maintenance (only pay for what you use)
   - May have concerns regarding data security and compliance
   - Shared with multiple organisations or tenants through public internet
-- Hybrid cloud - A combination of on-premises infrastructure and public and/or private cloud services
+- **Hybrid cloud** - A combination of on-premises infrastructure and public and/or private cloud services
   - Combines on-premises infrastructure with public and/or private cloud services
   - Allows organisations to leverage the benefits of both environments while maintaining control over sensitive data and applications
   - Can expand their cloud computing capacity without increasing their data center expenses.
   - Provides flexibility to choose where to run workloads based on factors such as performance, security, and cost reducing downtime and over dependence on a single source of failure
   - Enables seamless integration between on-premises and cloud resources, allowing for greater agility and scalability
-- Multi-cloud - describes architectures that combine at least two public cloud providers, has similar benfefits as hybrid cloud.
+- **Multi-cloud** - describes architectures that combine at least two public cloud providers, has similar benfefits as hybrid cloud.
   - Utilizes multiple cloud services from different providers to meet specific business needs
   - Avoids vendor lock-in and allows organisations to leverage the best features and capabilities of each provider
   - Wider choice of tools and developer talent can be applied to a particular business problem, which means responding better to changing market demands
   - Requires careful management and integration to ensure seamless operation across different cloud environments
 
 ### Benefits of Cloud Computing
-- Scalable - allows organisations to easily scale their resources up or down based on demand, providing flexibility and cost-efficiency (reducing cap ex & fixed infrastructure costs)
-- Flexible - offers a wide range of services and tools that can be accessed anywhere and tailored to meet specific business needs, enabling organisations to innovate and adapt quickly to changing market conditions
-- Agile - enables organisations to rapidly deploy and iterate on applications and services, fostering a culture of innovation and continuous improvement without underlying infrastructure constraints
-- Strategic - allows organisations to focus on their core business objectives and innovations, rather than managing and maintaining IT infrastructure, enabling them to drive digital transformation and achieve competitive advantage
-- Secure - provides robust security measures and compliance certifications to protect data and applications, giving organisations confidence in the safety of their digital assets while leveraging the benefits of cloud computing
-- Cost-effective - offers a pay-as-you-go pricing model, allowing organisations to only pay for the resources they use, reducing upfront costs and enabling better budget management while leveraging the benefits of cloud computing
+- **Scalable** - allows organisations to easily scale their resources up or down based on demand, providing flexibility and cost-efficiency (reducing cap ex & fixed infrastructure costs)
+- **Flexible** - offers a wide range of services and tools that can be accessed anywhere and tailored to meet specific business needs, enabling organisations to innovate and adapt quickly to changing market conditions
+- **Agile** - enables organisations to rapidly deploy and iterate on applications and services, fostering a culture of innovation and continuous improvement without underlying infrastructure constraints
+- **Strategic** - allows organisations to focus on their core business objectives and innovations, rather than managing and maintaining IT infrastructure, enabling them to drive digital transformation and achieve competitive advantage
+- **Secure** - provides robust security measures and compliance certifications to protect data and applications, giving organisations confidence in the safety of their digital assets while leveraging the benefits of cloud computing
+- **Cost-effective** - offers a pay-as-you-go pricing model, allowing organisations to only pay for the resources they use, reducing upfront costs and enabling better budget management while leveraging the benefits of cloud computing
 
 ### Challenges that lead to digital transformation
-- Unifying data - Integrating and managing data from various sources (streams, lakes, warehouses, databases) can be complex, requiring robust data management strategies and tools to ensure data quality, consistency, and accessibility across the organisation.
-- Optimum technology infrastructure - Selecting and implementing the right technology infrastructure to support digital transformation initiatives can be challenging, as it requires careful consideration of factors such as scalability, security, and compatibility with existing systems.
-- Hybrid workplace - Adapting to a hybrid workplace model, where employees work both remotely and in-office, can present challenges in terms of communication, collaboration, and maintaining a cohesive company culture.
-- Security and compliance - Ensuring the security of data and applications while complying with relevant regulations and industry standards can be complex, requiring organisations to implement robust security measures and stay up-to-date with evolving compliance requirements.
-- Sustainability - Balancing the need for digital transformation with environmental sustainability goals can be challenging, as organisations must consider the energy consumption and carbon footprint of their technology infrastructure while striving to achieve their digital transformation objectives.
+- **Unifying data** - Integrating and managing data from various sources (streams, lakes, warehouses, databases) can be complex, requiring robust data management strategies and tools to ensure data quality, consistency, and accessibility across the organisation.
+- **Optimum technology infrastructure** - Selecting and implementing the right technology infrastructure to support digital transformation initiatives can be challenging, as it requires careful consideration of factors such as scalability, security, and compatibility with existing systems.
+- **Hybrid workplace** - Adapting to a hybrid workplace model, where employees work both remotely and in-office, can present challenges in terms of communication, collaboration, and maintaining a cohesive company culture.
+- **Security and compliance** - Ensuring the security of data and applications while complying with relevant regulations and industry standards can be complex, requiring organisations to implement robust security measures and stay up-to-date with evolving compliance requirements.
+- **Sustainability** - Balancing the need for digital transformation with environmental sustainability goals can be challenging, as organisations must consider the energy consumption and carbon footprint of their technology infrastructure while striving to achieve their digital transformation objectives.
 
 ### Transformation Cloud
-- Data - Manage across entire data lifecycle to let organisations identify and process data with great scale, speed, security and reliabilty
-- Open Infrastructure - Migrate from a single service provider or closed tech stack to hybrid, multi cloud approaches based on open source software while leaving the operation, governance and evolution to GCP
-- Trust - Helps organisations protect their data and applications with security, privacy, compliance and transparency built in, so they can focus on innovation and growth. Orgs see cloud as more secure than on-prem as better visibility to find, analyse, resist and remediate threats at a global scale. 
-- Sustainable Technology and Solutions - Help organisations reduce their emissions, carbon footprint and achieve their sustainability goals by providing energy-efficient infrastructure, renewable energy options, and tools to measure and optimize their environmental impact.
+- **Data** - Manage across entire data lifecycle to let organisations identify and process data with great scale, speed, security and reliabilty
+- **Open Infrastructure** - Migrate from a single service provider or closed tech stack to hybrid, multi cloud approaches based on open source software while leaving the operation, governance and evolution to GCP
+- **Trust** - Helps organisations protect their data and applications with security, privacy, compliance and transparency built in, so they can focus on innovation and growth. Orgs see cloud as more secure than on-prem as better visibility to find, analyse, resist and remediate threats at a global scale. 
+- **Sustainable Technology and Solutions** - Help organisations reduce their emissions, carbon footprint and achieve their sustainability goals by providing energy-efficient infrastructure, renewable energy options, and tools to measure and optimize their environmental impact.
 
 **Data** - The foundation of digital transformation, enabling organisations to make informed decisions, drive innovation, and create new business opportunities.
 
